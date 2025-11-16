@@ -12,7 +12,8 @@
     const hideNavMenu = () => {
         navMenu.classList.remove("open");
         fadeOutEffect();
-        toggleBodyScrolling();
+        // Force unlock scrolling when menu closes
+        unlockBodyScrolling();
     };
 
     const fadeOutEffect = () => {
@@ -60,6 +61,11 @@
 
             // Update URL hash
             window.location.hash = hash;
+            
+            // Force unlock scrolling after navigation
+            setTimeout(() => {
+                unlockBodyScrolling();
+            }, 350);
         }
     });
 })();
@@ -209,6 +215,14 @@ function toggleBodyScrolling() {
     document.body.classList.toggle("stop-scrolling");
 }
 
+// NEW: Force unlock scrolling function
+function unlockBodyScrolling() {
+    document.body.classList.remove("stop-scrolling");
+    // Extra safety - reset overflow properties
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+}
+
 /*--------------- Page Preloader ----------------- */
 window.addEventListener("load", () => {
     document.querySelector(".preloader").classList.add("fade-out");
@@ -216,3 +230,17 @@ window.addEventListener("load", () => {
         document.querySelector(".preloader").style.display = "none";
     }, 600);
 });
+
+/*--------------- Safety Check - Unlock scroll if stuck ----------------- */
+// Check every 2 seconds if scroll is stuck
+setInterval(() => {
+    const navMenu = document.querySelector(".nav-menu");
+    const popup = document.querySelector(".portfolio-popup");
+    
+    // If menu is closed and popup is closed, ensure scroll is unlocked
+    if (!navMenu.classList.contains("open") && !popup.classList.contains("open")) {
+        if (document.body.classList.contains("stop-scrolling")) {
+            unlockBodyScrolling();
+        }
+    }
+}, 2000);

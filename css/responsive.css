@@ -27,21 +27,28 @@
         max-width: 100% !important;
     }
 
-    /* Center service cards properly in mobile */
+    /* Service cards - static layout with gaps */
     .service-section .service-item {
-        display: flex;
-        justify-content: center;
+        margin-bottom: 20px;
         padding: 0 15px;
     }
 
-    .service-section .service-item-inner {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
+    .service-section .service-item:last-child {
+        margin-bottom: 0;
     }
 
-    /* Disable tilt animation on mobile for better performance */
-    .service-section .card {
+    /* Remove all hover and animation effects on mobile */
+    .service-section .service-item .card {
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .service-section .service-item-inner {
+        transform: none !important;
+    }
+
+    /* Disable hover effects */
+    .service-section .service-item-inner:hover {
         transform: none !important;
     }
 }
@@ -76,11 +83,7 @@
         margin-bottom: 20px;
     }
 
-    /* Fix service card hover effect for mobile */
-    .service-section .service-item-inner {
-        text-align: center;
-    }
-
+    /* Remove hover padding changes */
     .service-section .service-item-inner h3,
     .service-section .service-item-inner p {
         padding: 0 20px;
@@ -91,10 +94,15 @@
         padding: 0 20px;
     }
 
-    /* Reduce service item spacing */
+    /* Service item spacing */
     .service-section .service-item {
         margin-bottom: 25px;
         padding: 0 10px;
+    }
+
+    /* Remove all transform effects on mobile */
+    .service-section .card {
+        transform: none !important;
     }
 
     /* Reduce portfolio item spacing */
@@ -219,8 +227,20 @@
         font-size: 40px;
     }
 
-    /* Reduce service/portfolio/contact item spacing further */
-    .service-section .service-item,
+    /* Service item - compact spacing */
+    .service-section .service-item {
+        margin-bottom: 18px;
+        padding: 0 10px;
+    }
+
+    /* Remove all effects completely */
+    .service-section .service-item *,
+    .service-section .card * {
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* Reduce portfolio/contact item spacing further */
     .portfolio-section .portfolio-item,
     .contact-section .contact-item {
         margin-bottom: 15px;

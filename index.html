@@ -687,53 +687,51 @@
       </div>
     </section>
     <!-- ========== End contact section ========== -->
-
-    <!-- ========== Start portfolio popup ========== -->
-    <div class="pp portfolio-popup">
-      <div class="pp-details">
-        <div class="pp-details-inner">
-          <div class="pp-title">
-            <h2>personal portfolio</h2>
-            <p>Category - <span class="pp-project-category">Web Application</span></p>
-          </div>
-          <div class="pp-project-details">
-            <div class="row">
-              <div class="description">
-                <h3>Project brief: </h3>
-                <p>Lorem ipsum dolor, sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis corporis culpa! amet consectetur adipisicing elit. Hic doloribus labore assumenda nostrum commodi. Officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt.</p>
+        <div class="pp portfolio-popup">
+          <div class="pp-details">
+            <div class="pp-details-inner">
+              <div class="pp-title">
+                <h2>personal portfolio</h2>
+                <p>Category - <span class="pp-project-category">Web Application</span></p>
               </div>
-              <div class="info">
-                <h3>Project info</h3>
-                <ul>
-                  <li>Date - <span>2021</span></li>
-                  <li>Client - <span>xyz</span></li>
-                  <li>Tools - <span>html, css, js</span></li>
-                  <li>Web - <span><a href="#" id="link" id="link" target="_next">www.morsed.com/project_name</a></span></li>
-                </ul>
+              <div class="pp-project-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Project brief: </h3>
+                    <p>Lorem ipsum dolor, sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis corporis culpa! amet consectetur adipisicing elit. Hic doloribus labore assumenda nostrum commodi. Officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt.</p>
+                  </div>
+                  <div class="info">
+                    <h3>Project info</h3>
+                    <ul>
+                      <li>Date - <span>2021</span></li>
+                      <li>Client - <span>xyz</span></li>
+                      <li>Tools - <span>html, css, js</span></li>
+                      <li>Web - <span><a href="#" id="link" id="link" target="_next">www.morsed.com/project_name</a></span></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="separator"></div>
+          <div class="separator"></div>
 
-      <div class="pp-main">
-        <div class="pp-main-inner">
-          <div class="pp-project-details-btn outer-shadow hover-in-shadow">Project Details<i class="fas fa-plus"></i></div>
-          <div class="pp-close outer-shadow hover-in-shadow">&times;</div>
-          <img src="img/portfolio/large/project-1/1.png" alt="img" class="pp-img outer-shadow">
-          <div class="pp-counter">1 of 6</div>
+          <div class="pp-main">
+            <div class="pp-main-inner">
+              <div class="pp-project-details-btn outer-shadow hover-in-shadow">Project Details<i class="fas fa-plus"></i></div>
+              <div class="pp-close outer-shadow hover-in-shadow">&times;</div>
+              <img src="img/portfolio/large/project-1/1.png" alt="img" class="pp-img outer-shadow">
+              <div class="pp-counter">1 of 6</div>
+            </div>
+            <div class="pp-loader">
+              <div class="loader"></div>
+            </div>
+            <!-- ========== Start pp navigation ========== -->
+            <div class="pp-pre"><i class="fas fa-play"></i></div>
+            <div class="pp-next"><i class="fas fa-play"></i></div>
+            <!-- ========== End pp navigation ========== -->
+          </div>
         </div>
-        <div class="pp-loader">
-          <div class="loader"></div>
-        </div>
-        <!-- ========== Start pp navigation ========== -->
-        <div class="pp-pre"><i class="fas fa-play"></i></div>
-        <div class="pp-next"><i class="fas fa-play"></i></div>
-        <!-- ========== End pp navigation ========== -->
-      </div>
-    </div>
     <!-- ========== End portfolio popup ========== -->
 
     <!-- ========== Start style switciher start - for demo pirposs only ========== -->
@@ -755,7 +753,6 @@
       </div>
     </div>
     <!-- ========== End style switciher start - for demo pirposs only ========== -->
-    
     <!-- main js -->
     <script src="js/main.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
@@ -766,49 +763,21 @@
     <script src="js/glassmorphism-animation.js"></script>
     <script src="js/autoTypingAnimation.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    
-    <!-- VanillaTilt Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-    
-    <!-- VanillaTilt Initialization -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const isMobile = window.innerWidth <= 767;
-        
-        if (!isMobile) {
-          // Service cards
-          VanillaTilt.init(document.querySelectorAll(".service-item .card"), {
-            max: 15,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.3,
-            scale: 1.05
-          });
-          
-          // Contact cards
-          VanillaTilt.init(document.querySelectorAll(".contact-card"), {
-            max: 20,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.2
-          });
-          
-          // Social link cards
-          VanillaTilt.init(document.querySelectorAll(".link-card"), {
-            max: 25,
-            speed: 400,
-            scale: 1.1
-          });
-          
-          // Color switcher buttons
-          VanillaTilt.init(document.querySelectorAll(".colors span"), {
-            max: 25,
-            speed: 300,
-            scale: 1.1
-          });
-        }
+      VanillaTilt.init(document.querySelectorAll(".contact-card"), {
+        max: 25,
+        speed: 400
       });
+
+      VanillaTilt.init(document.querySelectorAll(".link-card"), {
+        max: 25,
+        speed: 400
+      });
+
+      VanillaTilt.init(document.querySelectorAll(".card")),{
+        max: 25,
+        speed: 300
+      };
     </script>
-    
   </body>
 </html>

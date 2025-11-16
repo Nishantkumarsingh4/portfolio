@@ -11,21 +11,6 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-
-    /* Reduce section padding for tablets */
-    .section {
-        padding: 60px 0 !important;
-    }
-}
-
-/* Mobile: Stack service items vertically below 600px */
-@media(max-width: 600px){
-    .service-section .service-item,
-    .contact-section .contact-item,
-    .portfolio-section .portfolio-item{
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
 }
 
 @media(max-width: 767px){
@@ -39,42 +24,12 @@
     .about-section .about-img,
     .home-section .home-text,
     .portfolio-popup .info{
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Critical: Reduce section padding to minimize gaps */
-    .section {
-        padding: 40px 0 !important;
-    }
-
-    /* Reduce spacing between section elements */
-    .section-title {
-        margin-bottom: 30px !important;
-    }
-
-    /* Reduce row margins */
-    .row {
-        margin-bottom: 20px;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
     .service-section .service-item-inner:hover h3, p {
         padding: 0 15px;
-    }
-
-    /* Reduce service item spacing */
-    .service-section .service-item {
-        margin-bottom: 20px;
-    }
-
-    /* Reduce portfolio item spacing */
-    .portfolio-section .portfolio-item {
-        margin-bottom: 20px;
-    }
-
-    /* Reduce contact item spacing */
-    .contact-section .contact-item {
-        margin-bottom: 20px;
     }
 
     .home-section .home-text{
@@ -110,16 +65,6 @@
         padding-bottom: 30px;
     }
 
-    /* Reduce about section tab spacing */
-    .about-section .about-tabs {
-        margin-bottom: 20px !important;
-    }
-
-    /* Reduce skill item spacing */
-    .about-section .skills .skill-item {
-        margin-bottom: 15px;
-    }
-
     .about-section .timeline .timeline-item:nth-child(odd){
         padding-right: 15px;
         text-align: left;
@@ -144,7 +89,7 @@
     }
 
     .about-section .timeline .timeline-item{
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .about-section .timeline .timeline-item:last-child{
@@ -160,53 +105,14 @@
         margin-bottom: 30px;
     }
 
-    /* Reduce contact form spacing */
-    .contact-section .contact-form {
-        margin-top: 20px;
-    }
-
-    .contact-section .input-group {
-        margin-bottom: 15px;
-    }
-
 }
 
 @media(max-width: 574px){
-    /* Further reduce section padding for small phones */
-    .section {
-        padding: 30px 0 !important;
-    }
-
-    .section-title {
-        margin-bottom: 25px !important;
-    }
-
     .home-section .home-image .img-box{
         max-width: 260px;
     }
 
     .home-section .home-text h2{
         font-size: 40px;
-    }
-
-    /* Reduce service/portfolio/contact item spacing further */
-    .service-section .service-item,
-    .portfolio-section .portfolio-item,
-    .contact-section .contact-item {
-        margin-bottom: 15px;
-    }
-
-    /* Compact timeline items */
-    .about-section .timeline .timeline-item {
-        margin-bottom: 25px;
-    }
-}
-
-/* Additional fix for any extra bottom margins */
-@media(max-width: 767px){
-    .service-section .row:last-child,
-    .portfolio-section .row:last-child,
-    .contact-section .row:last-child {
-        margin-bottom: 0 !important;
     }
 }

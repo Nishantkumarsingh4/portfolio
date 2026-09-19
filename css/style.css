@@ -663,22 +663,33 @@ img{
 
 .about-section .about-img .social-links{
     margin: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 15px;
 }
 .about-section .about-img .social-links a{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
     width: 40px;
     border-radius: 12px;
     font-size: 16px;
     text-align: center;
     color: var(--text-black-600);
-    margin: 0 4px;
     transition: all 0.3s ease;
     margin-bottom: 15px;
 }
 .about-section .about-img .social-links a i{
     line-height: 40px;
+}
+
+.about-section .about-img .social-links a .coding-logo{
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 
 .about-section .about-img .social-links a:hover{
@@ -1427,6 +1438,11 @@ body > div.pp.portfolio-popup.open > div.pp-details.active > div > div.pp-title 
 
 .contact-section .contact-item-inner .contact-p{
     display: block;
+}
+
+.contact-section .contact-item-inner .contact-p a{
+    color: inherit;
+    text-decoration: none;
 }
 
 .contact-section .contact-item-inner .contact-span{

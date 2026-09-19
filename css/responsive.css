@@ -238,6 +238,14 @@
         margin-bottom: 30px;
     }
 
+    .portfolio-popup .pp-pre {
+        left: -20px;
+    }
+
+    .portfolio-popup .pp-next {
+        right: -20px;
+    }
+
     /* Contact form responsive alignment */
     .contact-section .contact-form {
         margin-top: 20px;
@@ -365,6 +373,14 @@
 
     .about-section .timeline .timeline-item-inner{
         padding: 20px 15px;
+    }
+
+    .portfolio-popup .pp-pre {
+        left: -20px;
+    }
+
+    .portfolio-popup .pp-next {
+        right: -20px;
     }
 }
 

@@ -547,28 +547,31 @@ img{
 }
 
 .nav-menu ul{
+    text-align: center;
 }
 
 .nav-menu ul li {
     display: block;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .nav-menu ul li:last-child{
     margin-bottom: 0;
-    /* text-align: center; */
 }
 
 .nav-menu ul li a{
     display: inline-block;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 600;
     color: var(--text-black-600);
-    padding: 5px 30px;
+    padding: 8px 30px;
     text-transform: capitalize;
     border-radius: 30px;
     transition: all 0.3s ease;
+    min-width: 210px;
+    text-align: center;
 }
 
 .nav-menu ul li a.active{
@@ -1389,7 +1392,6 @@ body > div.pp.portfolio-popup.open > div.pp-details.active > div > div.pp-title 
 .contact-section{
     padding: 80px 0 80px;
     min-height: 100vh;
-    padding: 15px;
 }
 
 #contact > div > div:nth-child(2){

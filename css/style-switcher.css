@@ -59,13 +59,19 @@
 }
 
 .style-switcher .colors span{
-
     display: inline-block;
     height: 30px;
     width: 30px;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.style-switcher .colors span.active{
+    border-color: var(--text-black-900);
+    transform: scale(1.15);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 .style-switcher .color-1{

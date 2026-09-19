@@ -6,10 +6,24 @@
         max-width: 50%;
     }
 
+    .contact-section .contact-form {
+        padding: 0 15px;
+    }
+
     .contact-section .w-50 {
-        padding: 0 0 15px;
+        padding: 0;
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .contact-section .input-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-section .submit-btn {
+        text-align: center;
+        padding: 0;
     }
 
     /* Reduce section padding for tablets */
@@ -55,7 +69,7 @@
     /* Contact cards - static layout with gaps */
     .contact-section .contact-item {
         margin-bottom: 20px;
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .contact-section .contact-item:last-child {
@@ -189,26 +203,20 @@
         margin-bottom: 15px;
     }
 
-    .about-section .timeline .timeline-item:nth-child(odd){
-        padding-right: 15px;
-        text-align: left;
-        padding-left: 75px;
-    }
-
+    .about-section .timeline .timeline-item:nth-child(odd),
     .about-section .timeline .timeline-item:nth-child(even){
         padding-left: 75px;
+        padding-right: 15px;
+        text-align: left;
     }
 
     .about-section .timeline:before{
         left: 35px;
     }
 
-    .about-section .timeline .timeline-item:nth-child(odd) .icon{
-        right: auto;
-        left: -60px;
-    }
-
+    .about-section .timeline .timeline-item:nth-child(odd) .icon,
     .about-section .timeline .timeline-item:nth-child(even) .icon{
+        right: auto;
         left: -60px;
     }
 
@@ -220,8 +228,9 @@
         margin-bottom: 0%;
     }
 
-    .about-section .timeline .timeline-item:nth-child(odd) .timeline-item-inner::before {
-        line-gap-override: -30px;
+    .about-section .timeline .timeline-item:nth-child(odd) .timeline-item-inner::before,
+    .about-section .timeline .timeline-item:nth-child(even) .timeline-item-inner::before {
+        left: -30px;
         right: auto;
     }
 
@@ -229,18 +238,41 @@
         margin-bottom: 30px;
     }
 
-    /* Reduce contact form spacing */
+    /* Contact form responsive alignment */
     .contact-section .contact-form {
         margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .contact-section .w-50 {
+        padding: 0;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
     }
 
     .contact-section .input-group {
-        margin-bottom: 15px;
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .contact-section .submit-btn {
+        text-align: center;
+        padding: 0;
     }
 
 }
 
 @media(max-width: 574px){
+    .nav-menu ul li {
+        margin-bottom: 16px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 24px;
+        min-width: 200px;
+        padding: 7px 25px;
+    }
+
     /* Further reduce section padding for small phones */
     .section {
         padding: 30px 0 !important;
@@ -270,6 +302,32 @@
         padding: 0 10px;
     }
 
+    /* Contact form compact spacing & alignment */
+    .contact-section .contact-form {
+        margin-top: 15px;
+        padding: 0 10px;
+    }
+
+    .contact-section .w-50 {
+        padding: 0;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .contact-section .input-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .contact-section .input-group textarea.input-control {
+        height: 140px;
+    }
+
+    .contact-section .submit-btn {
+        text-align: center;
+        padding: 0;
+    }
+
     /* Remove all effects completely */
     .service-section .service-item *,
     .service-section .card *,
@@ -287,6 +345,26 @@
     /* Compact timeline items */
     .about-section .timeline .timeline-item {
         margin-bottom: 25px;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(odd),
+    .about-section .timeline .timeline-item:nth-child(even){
+        padding-left: 65px;
+        padding-right: 10px;
+        text-align: left;
+    }
+
+    .about-section .timeline:before{
+        left: 30px;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(odd) .icon,
+    .about-section .timeline .timeline-item:nth-child(even) .icon{
+        left: -55px;
+    }
+
+    .about-section .timeline .timeline-item-inner{
+        padding: 20px 15px;
     }
 }
 
